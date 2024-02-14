@@ -1,0 +1,88 @@
+.Header {
+	background-color: map-get($gray, dark);
+
+	&__container {
+		margin: 0 auto;
+		max-width: 1800px;
+		width: 100%;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+		justify-content: center;
+		margin-bottom: 0;
+		padding: 0;
+
+		&--item {
+			list-style: none;
+		}
+
+		&--link {
+			color: $header-text-color;
+			font-size: 18px;
+			font-weight: 500;
+			text-decoration: none;
+
+			&:hover {
+				color: orange;
+			}
+		}
+	}
+
+	&__options {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+
+		&--item {
+			list-style: none;
+			position: relative;
+
+			&.language {
+				margin-right: 20px;
+			}
+		}
+
+		&--link {
+			color: $header-text-color;
+			display: block;
+			font-size: 18px;
+			padding: 14px 18px;
+			text-decoration: none;
+
+			&:hover {
+				background-color: #a191b2;
+			}
+		}
+
+		&--carttext {
+			background-color: #d8624c;
+			border-radius: 50%;
+			color: $header-text-color;
+			font-size: 14px;
+			font-weight: 600;
+			height: 20px;
+			left: 13px;
+			position: absolute;
+			text-align: center;
+			top: -3px;
+			width: 20px;
+		}
+	}
+}

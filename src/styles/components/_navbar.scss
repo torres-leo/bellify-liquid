@@ -1,0 +1,11 @@
+.Navbar {
+	background-color: $bg-navbar;
+	padding: 10px 0;
+
+	&__text {
+		text-align: center;
+		color: $navbar-text-color;
+		margin: 0;
+		font-weight: 300;
+	}
+}
