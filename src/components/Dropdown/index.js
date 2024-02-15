@@ -20,7 +20,7 @@ const Dropdown = ({ options = [], text = '', links, onSelect, isToggle = false }
 		if (!isOpen) return null;
 
 		return (
-			<div className='dropdown-menu'>
+			<div className='Dropdown__menu'>
 				{options.map((option, index) => (
 					<button key={index} onClick={() => handleSelect(option)}>
 						{option}

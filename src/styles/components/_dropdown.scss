@@ -1,33 +1,3 @@
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-menu {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	z-index: 1000;
-	display: block;
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-top: none;
-}
-
-.dropdown-menu button {
-	display: block;
-	padding: 8px 12px;
-	width: 100%;
-	text-align: left;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-}
-
-.dropdown-menu button:hover {
-	background-color: #f0f0f0;
-}
-
 .Dropdown {
 	position: relative;
 	display: inline-block;
@@ -82,32 +52,39 @@
 			}
 		}
 	}
+
+	&__menu {
+		background-color: #fff;
+		border-top: none;
+		border: 1px solid #ccc;
+		display: block;
+		left: 0;
+		position: absolute;
+		top: 100%;
+		z-index: 1000;
+
+		button {
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			display: block;
+			padding: 8px 12px;
+			text-align: left;
+			width: 100%;
+		}
+	}
+
+	@include media-breakpoint-down(xxl) {
+		&__toggle,
+		&__hover {
+			font-size: 16px;
+		}
+	}
+
+	@include media-breakpoint-down(xl) {
+		&__toggle,
+		&__hover {
+			font-size: 15px;
+		}
+	}
 }
-
-// /* DropdownHover Content (Hidden by Default) */
-// .DropdownHover-content {
-// 	display: none;
-// 	position: absolute;
-// 	background-color: #f9f9f9;
-// 	min-width: 160px;
-// 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-// 	z-index: 1;
-// }
-
-/* Links inside the DropdownHover */
-// .DropdownHover-content a {
-// 	color: black;
-// 	padding: 12px 16px;
-// 	text-decoration: none;
-// 	display: block;
-// }
-
-// /* Change color of DropdownHover links on hover */
-// .DropdownHover-content a:hover {
-// 	background-color: #f1f1f1;
-// }
-
-// /* Show the DropdownHover menu on hover */
-// .Dropdown__hover:hover .DropdownHover-content {
-// 	display: block;
-// }

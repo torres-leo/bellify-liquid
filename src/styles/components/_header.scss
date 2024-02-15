@@ -18,6 +18,21 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		width: 155px;
+		height: 36px;
+
+		@include media-breakpoint-down(xl) {
+			width: 115px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
 	}
 
 	&__menu {
@@ -26,6 +41,7 @@
 		gap: 50px;
 		justify-content: center;
 		margin-bottom: 0;
+		margin-right: 120px;
 		padding: 0;
 
 		&--item {
@@ -40,6 +56,28 @@
 
 			&:hover {
 				color: orange;
+			}
+		}
+
+		&--mob {
+			display: none;
+		}
+
+		@include media-breakpoint-down(xxl) {
+			gap: 40px;
+			margin-right: 90px;
+
+			&--link {
+				font-size: 16px;
+			}
+		}
+
+		@include media-breakpoint-down(xl) {
+			gap: 30px;
+			margin-right: 30px;
+
+			&--link {
+				font-size: 15px;
 			}
 		}
 	}
@@ -84,6 +122,35 @@
 			text-align: center;
 			top: -3px;
 			width: 20px;
+		}
+
+		@include media-breakpoint-down(xxl) {
+			&--link {
+				font-size: 16px;
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+
+	&__hamburger {
+		display: none;
+
+		@include media-breakpoint-down(lg) {
+			color: $header-text-color;
+			display: block;
+			width: 20px;
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		&__menu {
+			&--mob {
+				display: flex;
+				align-items: center;
+			}
 		}
 	}
 }
