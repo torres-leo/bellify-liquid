@@ -1,0 +1,153 @@
+.Hero {
+	position: relative;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	&__image {
+		width: 100%;
+
+		&.desk {
+			display: block;
+		}
+
+		&.tablet {
+			display: none;
+		}
+
+		&.mob {
+			display: none;
+		}
+	}
+
+	&__breadcrumb {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		list-style-type: none;
+		margin: 0;
+		position: absolute;
+		top: 35px;
+		left: 20px;
+
+		&--item {
+			color: $hero-text-color;
+			font-size: 12px;
+
+			&::after {
+				content: '>';
+				display: inline-flex;
+				font-size: 12px;
+				color: $hero-text-color;
+				position: absolute;
+				margin-left: 7px;
+			}
+
+			&:last-of-type {
+				&::after {
+					content: '';
+				}
+			}
+		}
+	}
+
+	&__backdrop {
+		background-color: rgba($hero-backdrop, 0.5);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	&__info {
+		color: #fff;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		max-width: 1050px;
+		position: absolute;
+		top: 0;
+
+		&--title {
+			font-size: 36px;
+			font-weight: 700;
+			letter-spacing: 7.2px;
+			margin-bottom: 42px;
+			text-transform: uppercase;
+		}
+
+		&--description {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 30px;
+			text-align: center;
+			margin: 0;
+		}
+	}
+
+	@include media-breakpoint-down(xxl) {
+		&__image {
+			&.desk {
+				display: none;
+			}
+
+			&.tablet {
+				display: block;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(xl) {
+		&__info {
+			padding: 0 30px;
+			max-width: 850px;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		&__info {
+			&--title {
+				text-align: center;
+			}
+
+			&--description {
+				line-height: 27px;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		&__image {
+			&.tablet {
+				display: none;
+			}
+
+			&.mob {
+				display: block;
+			}
+		}
+
+		&__info {
+			padding: 0 10px;
+			max-width: 370px;
+
+			&--title {
+				font-size: 32px;
+				margin-bottom: 32px;
+			}
+
+			&--description {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+}
