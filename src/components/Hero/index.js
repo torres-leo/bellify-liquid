@@ -7,7 +7,7 @@ function Hero({ imgDesk = '', imgMob = '', imgTablet = '', title = '', descripti
 				<Image className='Hero__image desk' src={imgDesk} width={0} height={500} alt='hero image' />
 
 				<Image className='Hero__image tablet' src={imgTablet} width={0} height={630} alt='hero image' />
-				<Image className='Hero__image mob' src={imgMob} width={0} height={650} alt='hero image' />
+				<Image className='Hero__image mob' src={imgMob} width={0} height={550} alt='hero image' />
 
 				<div className='Hero__backdrop'></div>
 

@@ -8,7 +8,7 @@ import SectionContainer from '@/components/SectionContainer';
 
 function HomePage() {
 	const heroDescription =
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium aliquet orci, vitae imperdiet ante dignissim id. Vestibulum convallis sem mauris, eu vestibulum felis dignissim sit amet. Sed ligula arcu, vulputate eu ullamcorpella diam leo, luctus et nibh vel, dictum pulvinar nisl.';
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium aliquet orci, vitae imperdiet ante dignissim id. Vestibulum convallis sem mauris, eu vestibulum felis dignissim sit amet. Sed ligula arcu, vulputate eu ullamcorpella';
 
 	const paletInfo = `
 		<h3>Lorem ipsum</h3>
@@ -21,6 +21,8 @@ function HomePage() {
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium aliquet orci, vitae imperdiet ante dignissim id. Vestibs et nibh vel, dictum pulvinar nisl. Nunc ut est aliquam, finibus mi vulputate, tincidunt nulla. Sed nisl metus, pulvinar vel scelerisque in, malesuada a ex.</p>
 		`;
 
+	const formDescription = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis. Vivamus consequat et ligula ut luctus. Pellentesque maximus varius mi id accumsan`;
+
 	return (
 		<main>
 			<Hero
@@ -32,6 +34,9 @@ function HomePage() {
 			/>
 
 			<SectionContainer title='LOREM IPSUM DOLOR SIT AMET' contentInfo={paletInfo} img={paletImg} customClass='palet' />
+			<SectionContainer title='¿TE INTERESA? CONTACTA CON NOSOTROS' description={formDescription} customClass='form'>
+				<h1>THIS SPACE IS FOR FORM</h1>
+			</SectionContainer>
 		</main>
 	);
 }

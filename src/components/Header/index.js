@@ -44,8 +44,8 @@ function Header() {
 			<Navbar />
 			<div className='Header__container'>
 				<div className='Header__wrapper'>
-					<figure className='mb-2'>
-						<Image className='Header__logo' src={BellilyLogo} width={0} height={0} alt='Bellily Logo' />
+					<figure className='Header__logo'>
+						<Image className='Header__logo--img' src={BellilyLogo} width={0} height={0} alt='Bellily Logo' />
 					</figure>
 
 					<div className='Header__menu--mob'>
@@ -60,33 +60,31 @@ function Header() {
 						</p>
 					</div>
 
-					<div className='Header__row'>
-						<ul className='Header__menu'>
-							<Dropdown links={serviceLinks} text='Servicios' />
-							{renderLinks()}
-						</ul>
+					<ul className='Header__menu'>
+						<Dropdown links={serviceLinks} text='Servicios' />
+						{renderLinks()}
+					</ul>
 
-						<ul className='Header__options'>
-							<li className='Header__options--item'>
-								<Link className='Header__options--link' href='#'>
-									Iniciar sesión
-								</Link>
-							</li>
-							<li className='Header__options--item'>
-								<Link className='Header__options--link' href='#'>
-									Reserva
-								</Link>
-							</li>
-							<li className='Header__options--item language'>
-								<Dropdown options={['ES', 'EN', 'CAT']} onSelect={handleSelect} isToggle={true} />
-							</li>
-							<li className='Header__options--item me-5'>{iconHeart}</li>
-							<li className='Header__options--item'>
-								{iconCart}
-								<span className='Header__options--carttext'>6</span>
-							</li>
-						</ul>
-					</div>
+					<ul className='Header__options'>
+						<li className='Header__options--item'>
+							<Link className='Header__options--link' href='#'>
+								Iniciar sesión
+							</Link>
+						</li>
+						<li className='Header__options--item'>
+							<Link className='Header__options--link' href='#'>
+								Reserva
+							</Link>
+						</li>
+						<li className='Header__options--item language'>
+							<Dropdown options={['ES', 'EN', 'CAT']} onSelect={handleSelect} isToggle={true} />
+						</li>
+						<li className='Header__options--item me-5'>{iconHeart}</li>
+						<li className='Header__options--item'>
+							{iconCart}
+							<span className='Header__options--carttext'>6</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</header>

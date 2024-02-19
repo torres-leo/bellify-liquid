@@ -72,21 +72,22 @@
 		flex-direction: column;
 		height: 100%;
 		justify-content: center;
-		max-width: 1050px;
+		max-width: 857px;
 		position: absolute;
-		top: 0;
+		top: -10px;
 
 		&--title {
 			font-size: 36px;
 			font-weight: 700;
-			letter-spacing: 7.2px;
-			margin-bottom: 42px;
+			letter-spacing: 6.8px;
+			margin-bottom: 46px;
 			text-transform: uppercase;
 		}
 
 		&--description {
 			font-size: 16px;
 			font-weight: 400;
+			letter-spacing: -0.3px;
 			line-height: 30px;
 			text-align: center;
 			margin: 0;
@@ -112,10 +113,20 @@
 		}
 	}
 
+	@include media-breakpoint-down(lg) {
+		&__info {
+			&--title {
+				max-width: 400px;
+				text-align: center;
+			}
+		}
+	}
+
 	@include media-breakpoint-down(md) {
 		&__info {
 			&--title {
-				text-align: center;
+				font-size: 32px;
+				letter-spacing: 5.5px;
 			}
 
 			&--description {
@@ -125,6 +136,10 @@
 	}
 
 	@include media-breakpoint-down(sm) {
+		&__breadcrumb {
+			display: none;
+		}
+
 		&__image {
 			&.tablet {
 				display: none;
@@ -138,14 +153,36 @@
 		&__info {
 			padding: 0 10px;
 			max-width: 370px;
+			top: -35px;
 
 			&--title {
-				font-size: 32px;
+				font-size: 28px;
 				margin-bottom: 32px;
 			}
 
 			&--description {
 				font-size: 14px;
+				letter-spacing: 0;
+				line-height: 24px;
+			}
+		}
+	}
+
+	@media (width <420px) {
+		&__info {
+			padding: 0 10px;
+			max-width: 370px;
+			top: -35px;
+
+			&--title {
+				font-size: 24px;
+				letter-spacing: 4.1px;
+				margin-bottom: 32px;
+			}
+
+			&--description {
+				font-size: 14px;
+				letter-spacing: 0;
 				line-height: 24px;
 			}
 		}
