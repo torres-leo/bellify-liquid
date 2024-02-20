@@ -23,6 +23,12 @@
 			border: 1px solid map-get($gray, soft);
 			padding: 18px 35px;
 			width: 100%;
+
+			&::placeholder {
+				color: $black;
+				font-size: 14px;
+				font-weight: 500;
+			}
 		}
 	}
 
