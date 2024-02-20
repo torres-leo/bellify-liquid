@@ -2,11 +2,18 @@ $black: #000;
 $white: #fff;
 $gray: (
 	dark: #313131,
+	soft: #d0d0d0,
 );
+$soft-magenta: #a191b2;
 
 $bg-navbar: $black;
 $header-text-color: $white;
+$header-hover-item: $soft-magenta;
 $navbar-text-color: $white;
 
 $hero-backdrop: $black;
 $hero-text-color: $white;
+
+$section-color-title: $soft-magenta;
+
+$form-btn-color: $soft-magenta;

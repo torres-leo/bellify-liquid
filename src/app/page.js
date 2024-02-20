@@ -3,6 +3,7 @@ import heroImgMob from '@/assets/images/hero-img-mob.png';
 import heroImgTablet from '@/assets/images/hero-img-tablet.png';
 import paletImg from '@/assets/images/palet-img.png';
 
+import Form from '@/components/Form';
 import Hero from '@/components/Hero';
 import SectionContainer from '@/components/SectionContainer';
 
@@ -35,7 +36,7 @@ function HomePage() {
 
 			<SectionContainer title='LOREM IPSUM DOLOR SIT AMET' contentInfo={paletInfo} img={paletImg} customClass='palet' />
 			<SectionContainer title='¿TE INTERESA? CONTACTA CON NOSOTROS' description={formDescription} customClass='form'>
-				<h1>THIS SPACE IS FOR FORM</h1>
+				<Form />
 			</SectionContainer>
 		</main>
 	);
