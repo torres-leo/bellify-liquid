@@ -1,3 +1,7 @@
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+
 import heroImgDesk from '@/assets/images/hero-img-desk.png';
 import heroImgMob from '@/assets/images/hero-img-mob.png';
 import heroImgTablet from '@/assets/images/hero-img-tablet.png';
@@ -6,6 +10,7 @@ import paletImg from '@/assets/images/palet-img.png';
 import Form from '@/components/Form';
 import Hero from '@/components/Hero';
 import SectionContainer from '@/components/SectionContainer';
+import Carousel from '@/components/Carousel';
 
 function HomePage() {
 	const heroDescription =
@@ -24,6 +29,33 @@ function HomePage() {
 
 	const formDescription = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis. Vivamus consequat et ligula ut luctus. Pellentesque maximus varius mi id accumsan`;
 
+	const testimonials = [
+		{
+			author: 'Cristina M.',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis.',
+		},
+		{
+			author: 'Cristina M.',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis.',
+		},
+		{
+			author: 'Cristina M.',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis.',
+		},
+		{
+			author: 'Cristina M.',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis.',
+		},
+		{
+			author: 'Cristina M.',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis.',
+		},
+		{
+			author: 'Cristina M.',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend orci vitae nisl tristique, eget vehicula lacus iaculis.',
+		},
+	];
+
 	return (
 		<main>
 			<Hero
@@ -34,9 +66,18 @@ function HomePage() {
 				description={heroDescription}
 			/>
 
-			<SectionContainer title='LOREM IPSUM DOLOR SIT AMET' contentInfo={paletInfo} img={paletImg} customClass='palet' />
+			<SectionContainer
+				title='LOREM IPSUM DOLOR SIT AMET'
+				contentInfo={paletInfo}
+				img={paletImg}
+				customClass='palet'
+				isRow={true}
+			/>
 			<SectionContainer title='¿TE INTERESA? CONTACTA CON NOSOTROS' description={formDescription} customClass='form'>
 				<Form />
+			</SectionContainer>
+			<SectionContainer title='TESTIMONIOS' customClass='testimonials'>
+				<Carousel cards={testimonials} customClass='testimonials' />
 			</SectionContainer>
 		</main>
 	);

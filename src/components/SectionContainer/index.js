@@ -1,7 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
 
-function SectionContainer({ customClass = ' ', title = '', img = '', contentInfo = '', description = '', children }) {
+function SectionContainer({
+	customClass = ' ',
+	title = '',
+	img = '',
+	contentInfo = '',
+	description = '',
+	isRow = false,
+	children,
+}) {
 	const renderImageSide = () => {
 		if (!img) return;
 
@@ -22,21 +30,45 @@ function SectionContainer({ customClass = ' ', title = '', img = '', contentInfo
 		);
 	};
 
+	const renderSectionRow = () => {
+		if (isRow)
+			return (
+				<div className='Section__row'>
+					<div className='Section__info'>
+						{title && <h3 className='Section__info--title'>{title}</h3>}
+
+						{description && <p className='Section__info--description'>{description}</p>}
+
+						{renderContentHTML()}
+					</div>
+
+					{renderImageSide()}
+				</div>
+			);
+
+		return (
+			<div className='Section__info'>
+				{title && <h3 className='Section__info--title'>{title}</h3>}
+
+				{description && <p className='Section__info--description'>{description}</p>}
+
+				{renderContentHTML()}
+			</div>
+		);
+	};
+
 	return (
 		<section className={`Section ${customClass}`}>
 			<div className='Section__container'>
 				<div className='Section__wrapper'>
-					<div className='Section__row'>
-						<div className='Section__info'>
-							{title && <h3 className='Section__info--title'>{title}</h3>}
+					{renderSectionRow()}
+					{/* <div className='Section__info'>
+						{title && <h3 className='Section__info--title'>{title}</h3>}
 
-							{description && <p className='Section__info--description'>{description}</p>}
+						{description && <p className='Section__info--description'>{description}</p>}
 
-							{renderContentHTML()}
-						</div>
-
-						{renderImageSide()}
-					</div>
+						{renderContentHTML()}
+					</div> */}
 
 					{children}
 				</div>

@@ -2,9 +2,15 @@
 
 @import './vendor/vendor';
 
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+@import './components/carousel';
 @import './components/dropdown';
 @import './components/form';
 @import './components/header';
 @import './components/hero';
 @import './components/navbar';
 @import './components/sectionContainer';
+@import './components/testimonial';
