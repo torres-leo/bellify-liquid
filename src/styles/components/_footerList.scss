@@ -1,0 +1,114 @@
+.FooterList {
+	margin-top: 33px;
+	&-list {
+		display: flex;
+		flex-direction: column;
+	}
+	&-desktop {
+		display: none;
+	}
+	&-mobile {
+		display: block;
+	}
+	&-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-paragraph {
+		color: $white;
+		font-size: 12px;
+	}
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 29px;
+	}
+	&-social {
+		display: flex;
+		justify-content: space-between;
+		height: 29px;
+		margin-top: 33px;
+		&-title {
+			height: 29px;
+			color: $white;
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: normal;
+		}
+	}
+	&-logo {
+		color: $white;
+	}
+	&-title {
+		width: 197px;
+		height: 29px;
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 30px;
+		color: $white;
+	}
+	&-hr {
+		border: 0;
+		border-top: 0.5px solid $white;
+		margin-bottom: 44px;
+		margin-top: 64px;
+	}
+	@include media-breakpoint-up(lg) {
+		&-desktop {
+			display: block;
+		}
+		&-mobile {
+			display: none;
+		}
+		&-social {
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 0;
+			width: 30%;
+		}
+		&-social-title {
+			margin-bottom: 35px;
+			font-size: 30px;
+		}
+		&-title {
+			margin-bottom: 35px;
+			font-size: 30px;
+		}
+		&-form {
+			display: flex;
+			width: 83%;
+			line-height: 20px;
+		}
+		&-Polígono {
+			display: none;
+		}
+		&-header {
+			height: auto;
+		}
+		&-paragraph {
+			width: auto;
+			font-size: 14px;
+			margin-bottom: 17px;
+		}
+	}
+	@include media-breakpoint-down(xl) {
+		&-form {
+			width: 100%;
+		}
+	}
+	@include media-breakpoint-down(xxl) {
+		&-form {
+			width: 100%;
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.FooterList {
+		margin-top: 0;
+		width: 34%;
+	}
+}

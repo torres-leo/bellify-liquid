@@ -1,0 +1,37 @@
+.FooterForms {
+	&-secondtitle {
+		width: 197px;
+		height: 29px;
+		font-size: 18px;
+		line-height: 30px;
+		color: $white;
+		margin-bottom: 29px;
+	}
+	&-icons {
+		display: flex;
+		justify-content: center;
+		gap: 7px;
+		margin-top: 42px;
+		margin-bottom: 44px;
+	}
+	&-icon {
+		width: 60px;
+		height: 37px;
+		background-color: $white;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&-logo {
+		width: 30px;
+	}
+	@include media-breakpoint-up(lg) {
+		&-secondtitle {
+			font-size: 30px;
+			margin-right: 30px;
+			height: 42px;
+			margin-bottom: 0;
+		}
+	}
+}

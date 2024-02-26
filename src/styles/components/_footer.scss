@@ -1,0 +1,167 @@
+.Footer {
+	background-color: map-get($gray, dark);
+	&-content {
+		display: flex;
+		flex-direction: column;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	&-policy {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		background-color: $black;
+		&-title {
+			width: auto;
+			height: 15px;
+			font-weight: 500;
+			color: $white;
+			line-height: 18px;
+			font-size: 12px;
+			font-style: normal;
+			border-width: 1px;
+			border-style: dashed;
+			margin-top: 16px;
+			margin-bottom: 11px;
+		}
+		&-image {
+			width: 172px;
+			height: 20px;
+			margin-bottom: 15px;
+		}
+	}
+	&-title {
+		width: 197px;
+		height: 29px;
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 30px;
+		color: $white;
+		margin-top: 37px;
+		margin-bottom: 24px;
+		height: 29px;
+		width: 100%;
+	}
+	&-button {
+		width: 53px;
+		height: 42px;
+		color: $white;
+		background-color: $soft-magenta;
+		font-size: 26px;
+		border-radius: 1px $white;
+		border-color: rgba(0, 0, 0, 0.5);
+	}
+	&-images {
+		display: flex;
+		justify-content: space-around;
+	}
+	&-list {
+		display: flex;
+		flex-direction: column;
+	}
+	&-logos {
+		display: flex;
+		align-items: center;
+		&-spacing {
+			margin-right: 38px;
+			margin-left: 37px;
+		}
+	}
+	&-form {
+		width: 308px;
+		&-content {
+			width: 308px;
+			display: flex;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		&-form {
+			width: 100%;
+		}
+		&-formImputs {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&-form-content {
+			width: 500px;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		&-list {
+			display: flex;
+			flex-direction: row;
+		}
+		&-title {
+			margin-top: 0;
+			margin-bottom: 35px;
+			font-size: 30px;
+		}
+		&-main {
+			width: 30%;
+		}
+		&-images {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		&-content {
+			display: flex;
+			flex-direction: row;
+			width: 83%;
+			padding-left: 0;
+			padding-right: 0;
+			margin-top: 97px;
+		}
+		&-form {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&-formImputs {
+			width: 50%;
+			display: flex;
+			flex-direction: row;
+		}
+		&-appImage {
+			margin-bottom: 10px;
+		}
+	}
+	@include media-breakpoint-down(xl) {
+		&-content {
+			flex-direction: column;
+			width: auto;
+		}
+		&-form {
+			flex-direction: column;
+		}
+		&-formImputs {
+			flex-direction: column;
+		}
+		&-images {
+			flex-direction: row;
+			column-gap: 10%;
+		}
+	}
+	@include media-breakpoint-down(xxl) {
+		&-form {
+			flex-direction: column;
+		}
+		&-formImputs {
+			flex-direction: column;
+		}
+		&-content {
+			flex-direction: column;
+			width: auto;
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.Footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
